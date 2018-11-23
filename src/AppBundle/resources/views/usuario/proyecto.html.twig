@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">Fixed navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+        <h1 class="mt-5">Sticky footer with fixed navbar</h1>
+        <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
+        <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+{% endblock %}
+
+{% block stylesheets %}
+    {#<style>#}
+        {#body { background: #F5F5F5; font: 18px/1.5 sans-serif; }#}
+        {#h1, h2 { line-height: 1.2; margin: 0 0 .5em; }#}
+        {#h1 { font-size: 36px; }#}
+        {#h2 { font-size: 21px; margin-bottom: 1em; }#}
+        {#p { margin: 0 0 1em 0; }#}
+        {#a { color: #0000F0; }#}
+        {#a:hover { text-decoration: none; }#}
+        {#code { background: #F5F5F5; max-width: 100px; padding: 2px 6px; word-wrap: break-word; }#}
+        {##wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }#}
+        {##container { padding: 2em; }#}
+        {##welcome, #status { margin-bottom: 2em; }#}
+        {##welcome h1 span { display: block; font-size: 75%; }#}
+        {##icon-status, #icon-book { float: left; height: 64px; margin-right: 1em; margin-top: -4px; width: 64px; }#}
+        {##icon-book { display: none; }#}
+
+        {#@media (min-width: 768px) {#}
+            {##wrapper { width: 80%; margin: 2em auto; }#}
+            {##icon-book { display: inline-block; }#}
+            {##status a, #next a { display: block; }#}
+
+            {#@-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }#}
+            {#@keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }#}
+            {#.sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}#}
+        {#}#}
+    {#</style>#}
+{% endblock %}
